@@ -15,6 +15,9 @@ import com.example.improve.tasks3.R;
 import com.example.improve.tasks3.inputOutput.TasksApiAdapter;
 import com.example.improve.tasks3.model.Task;
 import com.example.improve.tasks3.ui.adapter.TaskAdapter;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.iid.FirebaseInstanceId;
+import com.google.firebase.iid.InstanceIdResult;
 
 import java.util.ArrayList;
 
@@ -103,6 +106,16 @@ public class TaskFragment extends Fragment implements Callback<ArrayList<Task>> 
         //Callback -> Es una funcion que se va a llamar cuando ocurra un evento detemrinado
         call.enqueue(this);
 
+        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
+            @Override
+            public void onSuccess(InstanceIdResult instanceIdResult) {
+                String deviceToken = instanceIdResult.getToken();
+                Log.d("Noticias","String desde task: " + deviceToken);
+                // Do whatever you want with your token now
+                // i.e. store it on SharedPreferences or DB
+                // or directly send it to server
+            }
+        });
 
         return vista;
     }

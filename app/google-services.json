@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "193294757722",
+    "firebase_url": "https://taskstest-69a59.firebaseio.com",
+    "project_id": "taskstest-69a59",
+    "storage_bucket": "taskstest-69a59.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193294757722:android:82b18a52fcc33167",
+        "android_client_info": {
+          "package_name": "com.example.improve.tasks3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193294757722-buifusr781i0r3cm4mb3tolb0bfaafou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJGrsZmLuYsgEsgjRN8llOXTfXG4XcaNk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
