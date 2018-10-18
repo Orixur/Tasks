@@ -86,6 +86,8 @@ public class TaskFragment extends Fragment implements Callback<ArrayList<Task>> 
 
         View vista = inflater.inflate(R.layout.fragment_task, container, false);
 
+        //------------------------------------------|||||-------------------------------------------
+
         mRecyclerView = vista.findViewById(R.id.recycler_view_tasks);
 
         // Usar esta línea para mejorar el rendimiento
@@ -103,8 +105,10 @@ public class TaskFragment extends Fragment implements Callback<ArrayList<Task>> 
 
         Call<ArrayList<Task>> call = TasksApiAdapter.getApiService().getTasks();
         //Poner peticion (call) en cola; se le pasa un callback
-        //Callback -> Es una funcion que se va a llamar cuando ocurra un evento detemrinado
+        //Callback -> Es una funcion que se va a llamar cuando ocurra un evento determinado
         call.enqueue(this);
+
+        //------------------------------------------|||||-------------------------------------------
 
         FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
             @Override

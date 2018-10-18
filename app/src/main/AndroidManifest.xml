@@ -30,6 +30,12 @@
             </intent-filter>
         </service>
 
+        <activity android:name=".ui.activity.Login">
+
+        </activity>
+        <activity android:name=".ui.activity.Register">
+
+        </activity>
     </application>
 
 </manifest>
